@@ -1,0 +1,4 @@
+[submodule "talky"]
+	path = talky
+	url = https://github.com/haipnh/talky
+	branch = test-deploy

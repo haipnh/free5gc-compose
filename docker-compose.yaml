@@ -260,6 +260,22 @@ services:
       - free5gc-amf
       - free5gc-upf
 
+  talky:
+    container_name: talky
+    build:
+      context: ./talky
+    image: talky
+    tty: true
+    networks:
+      privnet:
+        aliases:
+          - talky.free5gc.org
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - ueransim
+
 networks:
   privnet:
     ipam:

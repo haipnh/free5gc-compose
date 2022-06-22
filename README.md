@@ -19,6 +19,8 @@ Because we need to create tunnel interface, we need to use privileged container 
 # Clone the project
 git clone https://github.com/free5gc/free5gc-compose.git
 cd free5gc-compose
+git submodule init
+git submodule update
 
 # Build the images
 make base
